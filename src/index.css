@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Backgrounds */
+  --color-page: #fafaf9; /* page background */
+  --color-surface: #ffffff; /* cards */
+  --color-chip: #f5f5f4; /* tags, special photo bg */
+  --color-thumb: #e7e5e4; /* round image placeholder */
+
+  /* Text */
+  --color-ink: #1c1917; /* main text, category underline, sold-out badge, footer bg */
+  --color-ink-soft: #44403c; /* tag text */
+  --color-body: #57534e; /* descriptions, item counts */
+  --color-muted: #78716c; /* sold-out (crossed) price */
+
+  /* Borders */
+  --color-line: #e7e5e4; /* card borders */
+  --color-line-dashed: #a8a29e; /* default-image dashed circle */
+
+  /* Brand (header + prices) */
+  --color-brand: #047857; /* prices, links */
+  --color-brand-hover: #065f46;
+  --color-brand-dark: #064e3b; /* header background */
+  --color-brand-label: #a7f3d0; /* "OUR MENU" label */
+  --color-brand-text: #d1fae5; /* hours + location on header */
+
+  /* Footer (on dark) */
+  --color-footer-text: #d6d3d1; /* opening hours */
+  --color-footer-subtle: #a8a29e; /* copyright */
+  --color-footer-line: #292524; /* divider */
+  --color-footer-border: #44403c; /* "13 items" pill border */
+
+  /* Today's Special badge */
+  --color-special-bg: #fef3c7;
+  --color-special-icon: #b45309;
+  --color-special-text: #92400e;
+
+  /* Fonts */
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
