@@ -1,5 +1,7 @@
-import Tags from "./Tags";
 import { Image, ImageOff } from "lucide-react";
+import Tags from "./Tags";
+import Counter from "./Counter";
+import HeartLike from "./HeartLike";
 
 function MenuItems({ name, description, price, tags, isSoldOut, image, currency }) {
   return (
@@ -39,11 +41,16 @@ function MenuItems({ name, description, price, tags, isSoldOut, image, currency 
 
         <div>
           {isSoldOut ? (
-            <span className="w-fit inline-flex h-5 items-center justify-center rounded-md bg-ink px-1.5 text-[10px] font-medium text-page">
+            <span className="inline-flex h-5 w-fit items-center justify-center rounded-md bg-ink px-1.5 text-[10px] font-medium leading-none text-page">
               SOLD OUT
             </span>
           ) : null}
         </div>
+
+        <article className="relative flex items-center justify-between">
+          <HeartLike />
+          <Counter />
+        </article>
       </div>
     </div>
   );
