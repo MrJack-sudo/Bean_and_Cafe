@@ -1,15 +1,15 @@
 import MenuItems from "./MenuItems";
 
-function Category({ items, name, currency }) {
+function Category({ items, name, currency, formatPrice }) {
   return (
-    <section className="mx-20">
-      <div className="flex items-baseline gap-2 py-5 border-b-2 border-ink ">
+    <section>
+      <div className="flex items-baseline gap-2 py-5 border-b-2 border-ink">
         <h2 className="font-display text-3xl font-bold text-ink">{name}</h2>
         <span className="text-xs text-muted">
           {items.length} {items.length === 1 ? "item" : "items"}
         </span>
       </div>
-      <div className="grid gap-4 grid-cols-3 py-4">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 py-4">
         {items.map((item) => (
           <MenuItems
             key={item.id}
@@ -20,6 +20,7 @@ function Category({ items, name, currency }) {
             image={item.image}
             isSoldOut={item.isSoldOut}
             currency={currency}
+            formatPrice={formatPrice}
           />
         ))}
       </div>

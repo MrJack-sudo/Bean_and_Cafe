@@ -10,7 +10,10 @@ export const shop = {
 
 // Set once here, used by Price at the very bottom of the tree (5 layers down).
 // Try changing it to "៛" and see every price update.
-export const currency = "$";
+export const currencies = [
+  { id: "usd", name: "US", symbol: "$" },
+  { id: "khr", name: "Cambodia", symbol: "៛" },
+];
 
 // Today's special is NOT a copy — it points to an item that already exists below.
 // export const specialItemId = "c4";

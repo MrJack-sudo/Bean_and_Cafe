@@ -3,7 +3,7 @@ import Tags from "./Tags";
 import Counter from "./Counter";
 import HeartLike from "./HeartLike";
 
-function MenuItems({ name, description, price, tags, isSoldOut, image, currency }) {
+function MenuItems({ name, description, price, tags, isSoldOut, image, currency, formatPrice }) {
   return (
     <div className="group relative flex gap-4 rounded-xl border border-line bg-surface p-4 shadow-sm transition-all hover:shadow-md">
       <div
@@ -26,8 +26,7 @@ function MenuItems({ name, description, price, tags, isSoldOut, image, currency 
             <span
               className={`font-display font-bold text-brand ${isSoldOut ? "line-through text-muted" : ""}`}
             >
-              {currency}
-              {price}
+              {formatPrice ? formatPrice(price) : `${currency}${price}`}
             </span>
           </div>
 
