@@ -1,6 +1,11 @@
 import { Search } from "lucide-react";
 
-export default function SearchInput({ label = "Search", placeholder = "Latte, tea, sandwich..." }) {
+export default function SearchInput({
+  label = "Search",
+  placeholder = "Latte, tea, sandwich...",
+  value,
+  onChange,
+}) {
   return (
     <div className="flex-1 min-w-60">
       <label htmlFor="search" className="block text-xs font-semibold text-muted mb-2">
@@ -11,6 +16,8 @@ export default function SearchInput({ label = "Search", placeholder = "Latte, te
         <input
           id="search"
           type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           className="w-full pl-10 pr-4 py-2.5 bg-surface border border-line rounded-full text-sm text-ink placeholder-body focus:outline-none focus:ring-2 focus:ring-ink/5"
         />

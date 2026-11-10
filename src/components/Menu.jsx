@@ -1,6 +1,6 @@
 import Category from "./Category";
 
-function Menu({ categories, currency, formatPrice }) {
+function Menu({ categories, currency, formatPrice, showSoldOut, searchQuery }) {
   return (
     <div className="max-w-6xl mx-auto px-4 space-y-8">
       {categories.map((category) => (
@@ -10,6 +10,8 @@ function Menu({ categories, currency, formatPrice }) {
           name={category.name}
           currency={currency}
           formatPrice={formatPrice}
+          showSoldOut={showSoldOut}
+          searchQuery={searchQuery}
         />
       ))}
     </div>
